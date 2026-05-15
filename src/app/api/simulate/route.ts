@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { QuestionnaireData } from "@/types";
 
+export const maxDuration = 60; // 60 seconds max duration for Vercel Hobby tier
+
 export async function POST(request: Request) {
   try {
     const data: QuestionnaireData = await request.json();
